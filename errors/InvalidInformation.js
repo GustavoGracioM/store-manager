@@ -1,8 +1,7 @@
 class InvalidInformation extends Error {
-  constructor(message, code) {
-    super(message, code);
+  constructor(message) {
+    super(message);
     this.name = 'InvalidInformation';
-    this.code = code;
   }
 }
 
