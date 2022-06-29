@@ -5,7 +5,7 @@ const produtctService = {
   async checkIfExists(id) {
     const exists = await productModel.exists(id);
     if (!exists) {
-      throw new NotFoundError("Product not found");
+      throw new NotFoundError('Product not found');
     }
   },
   async get() {
@@ -15,8 +15,7 @@ const produtctService = {
   async getById(id) {
     const produtct = await productModel.getById(id);
     return produtct;
-  }
-
+  },
 };
 
 module.exports = produtctService;

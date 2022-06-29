@@ -7,4 +7,3 @@ products.get('/', productController.get);
 products.get('/:id', productController.getById);
 
 module.exports = products;
-

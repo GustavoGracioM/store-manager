@@ -1,4 +1,3 @@
-
 const produtctService = require('../services/productService');
 
 const productController = {

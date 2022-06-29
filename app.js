@@ -1,6 +1,7 @@
 const express = require('express');
 require('express-async-errors');
 const products = require('./router/products');
+
 const app = express();
 
 app.use('/products', products);
