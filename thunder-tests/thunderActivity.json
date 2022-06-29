@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "2cddae1f-d1e7-42c9-9333-6443eb2433b9",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost/products",
+    "url": "localhost/products",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-29T18:06:03.480Z",
+    "modified": "2022-06-29T18:06:03.545Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "052df4e3-202c-4ebc-bf25-6083fab9f70e",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.locakhost/products",
+    "url": "https://www.locakhost/products",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-29T18:06:50.198Z",
+    "modified": "2022-06-29T18:07:27.760Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8ef67a31-809f-46b4-affb-ceafb699cedc",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.localhost/products",
+    "url": "http://localhost:3000/products/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-29T18:07:38.708Z",
+    "modified": "2022-06-29T19:06:11.986Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
