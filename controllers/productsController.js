@@ -15,7 +15,7 @@ const productController = {
     const { name } = req.body;
     const newProduct = await produtctService.add(name);
     res.status(201).json(newProduct);
-  }
+  },
 };
 
 module.exports = productController; 

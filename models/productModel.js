@@ -20,7 +20,7 @@ const productModel = {
     const sql = 'INSERT INTO StoreManager.products (name) VALUES (?)';
     const [{ insertId }] = await connection.query(sql, [name]);
     return insertId;
-  }
+  },
 };
 
 module.exports = productModel;

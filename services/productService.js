@@ -1,5 +1,6 @@
 const productModel = require('../models/productModel');
-const { NotFoundError, NotInsertedError } = require('../errors/Errors');
+const NotFoundError = require('../errors/NotFound');
+const InvalidInformation = require('../errors/InvalidInformation');
 
 const produtctService = {
   async checkIfExists(id) {
@@ -18,11 +19,10 @@ const produtctService = {
   },
   async add(name) {
     const id = await productModel.add(name);
-    if (!id) throw new NotInsertedError('Product not insered');
+    if (!id) throw new InvalidInformation('Product not insered');
     const newProduct = await productModel.getById(id);
     return newProduct;
-
-  }
+  },
 };
 
 module.exports = produtctService;
