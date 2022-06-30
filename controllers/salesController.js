@@ -6,7 +6,7 @@ const salesController = {
     const saleId = await saleServices.addSale();
     listSale.forEach(async (l) => saleServices
       .addSaleProduct(saleId, Number(l.productId), Number(l.quantity)));
-    const sales = await saleServices.getSaleProduct(saleId);
+    const sales = await saleServices.getSaleById(saleId);
     res.status(201).json(sales);
   },
   async get(_req, res) {
