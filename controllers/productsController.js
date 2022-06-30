@@ -16,6 +16,14 @@ const productController = {
     const newProduct = await produtctService.add(name);
     res.status(201).json(newProduct);
   },
+  async edit(req, res) {
+    const { id } = req.params;
+    const { name } = req.body;
+    await produtctService.checkIfExists(id);
+    await produtctService.edit(id, name);
+    const saleUpdate = await produtctService.getById(id);
+    res.status(200).json(saleUpdate);
+  },
 };
 
 module.exports = productController; 
