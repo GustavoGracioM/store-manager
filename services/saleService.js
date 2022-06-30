@@ -1,12 +1,8 @@
 const saleModel = require('../models/saleModel');
 
-const serial = (saleId, sale) => {
+const serial = (sale) => {
   const newSerial = { productId: sale.product_id, quantity: sale.quantity };
-  const resutl = {
-    id: saleId,
-    itemsSold: newSerial,
-  };
-  return resutl;
+  return newSerial;
 };
 
 const saleService = {
@@ -19,8 +15,9 @@ const saleService = {
     return insertId;
   },
   async getSaleProduct(id) {
-    const sales = await saleModel.getSalesById(id);
-    return sales.map((sale) => serial(id, sale));
+    const result = await saleModel.getSalesById(id);
+    const sales = result.map((sale) => serial(sale));
+    return { id, itemsSold: sales };
   },
 };
 
