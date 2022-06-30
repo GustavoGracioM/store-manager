@@ -10,7 +10,7 @@ describe('models/productModel', () => {
   beforeEach(sinon.restore);
 
   describe('exists', () => {
-    it('deve disparar um erro caso o mysql dê pau', () => {
+    it('deve disparar um erro caso o mysql dê algum problema', () => {
       sinon.stub(connection, 'query').rejects();
       chai.expect(productModel.exists(1)).to.eventually.be.rejected;
     });
