@@ -24,6 +24,12 @@ const productController = {
     const saleUpdate = await produtctService.getById(id);
     res.status(200).json(saleUpdate);
   },
+  async remove(req, res) {
+    const { id } = req.params;
+    await produtctService.checkIfExists(id);
+    await produtctService.remove(id);
+    res.status(204).end();
+  },
 };
 
 module.exports = productController; 
