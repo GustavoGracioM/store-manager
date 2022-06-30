@@ -9,6 +9,16 @@ const salesController = {
     const sales = await saleServices.getSaleProduct(saleId);
     res.status(201).json(sales);
   },
+  async get(_req, res) {
+    const sales = await saleServices.get();
+    res.json(sales);
+  },
+  async getById(req, res) {
+    const { id } = req.params;
+    await saleServices.checkIfExists(id);
+    const sales = await saleServices.getSaleProductById(id);
+    res.json(sales);
+  },
 };
 
 module.exports = salesController; 
