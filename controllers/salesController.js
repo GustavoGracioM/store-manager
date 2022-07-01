@@ -11,7 +11,7 @@ const salesController = {
   },
   async get(_req, res) {
     const sales = await saleServices.get();
-    res.json(sales);
+    res.status(200).json(sales);
   },
   async getById(req, res) {
     const { id } = req.params;
